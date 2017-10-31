@@ -43,11 +43,17 @@
     <Compile Include="DataPage.xaml.cs">
       <DependentUpon>DataPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeletePage.xaml.cs">
+      <DependentUpon>DeletePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InsertPage.xaml.cs">
       <DependentUpon>InsertPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ISQLAzure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecuperarPage.xaml.cs">
+      <DependentUpon>RecuperarPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectPage.xaml.cs">
       <DependentUpon>SelectPage.xaml</DependentUpon>
     </Compile>
@@ -132,6 +138,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="InsertPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeletePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RecuperarPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

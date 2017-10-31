@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <Label Text="Matricula: " Grid.Column="0" Grid.Row="0" VerticalOptions="Center"/>
-            <Entry x:Name="Entry_Matricula" Grid.Column="1" Grid.Row="0"/>
+            <Entry x:Name="Entry_Matricula" Grid.Column="1" Grid.Row="0" IsEnabled="False"/>
             <Label Text="Nombre: " Grid.Column="0" Grid.Row="1" VerticalOptions="Center"/>
             <Entry x:Name="Entry_Nombre" Grid.Column="1" Grid.Row="1"/>
             <Label Text="Apellido" Grid.Column="0" Grid.Row="2" VerticalOptions="Center"/>

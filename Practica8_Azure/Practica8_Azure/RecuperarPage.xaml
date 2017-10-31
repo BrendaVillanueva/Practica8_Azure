@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Practica8_Azure.SelectPage">
+             x:Class="Practica8_Azure.RecuperarPage">
     <ContentPage.Content>
         <Grid BackgroundColor="LightGreen">
             <Grid.ColumnDefinitions>
@@ -14,6 +14,7 @@
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
@@ -33,16 +34,15 @@
             <Label Text="Telefono: " Grid.Column="0" Grid.Row="4" VerticalOptions="Center"/>
             <Entry x:Name="Entry_Telefono" Text="{Binding Telefono}" Grid.Column="1" Grid.Row="4"/>
             <Label Text="Carrera: " Grid.Column="0" Grid.Row="5" VerticalOptions="Center"/>
-            <Picker x:Name="Picker_Carrera" Grid.Column="1" Grid.Row="5"/>
+            <Entry x:Name="Entry_Carrera" Text="{Binding Carrera}" Grid.Column="1" Grid.Row="5"/>
             <Label Text="Semestre: " Grid.Column="0" Grid.Row="6" VerticalOptions="Center"/>
-            <Picker x:Name="Picker_Semestre" Grid.Column="1" Grid.Row="6"/>
+            <Entry x:Name="Entry_Semestre" Text="{Binding Semestre}" Grid.Column="1" Grid.Row="6"/>
             <Label Text="Correo: " Grid.Column="0" Grid.Row="7" VerticalOptions="Center"/>
             <Entry x:Name="Entry_Correo" Text="{Binding Correo}" Grid.Column="1" Grid.Row="7"/>
             <Label Text="GitHub" Grid.Column="0" Grid.Row="8" VerticalOptions="Center"/>
             <Entry x:Name="Entry_GitHub" Text="{Binding Github}" Grid.Column="1" Grid.Row="8"/>
-            <Button x:Name="Button_Actualizar" Text="Actualizar Registro" Clicked="Button_Actualizar_Clicked" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2"/>
-            <Button x:Name="Button_Eliminar" Text="Eliminar Registro" Clicked="Button_Eliminar_Clicked" Grid.Column="0" Grid.Row="10" Grid.ColumnSpan="2"/>
-            
+
+            <Button Text="Recuperar Datos" x:Name="Button_Recuperar" Clicked="Button_Recuperar_Clicked" Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2"/>
 
         </Grid>
     </ContentPage.Content>

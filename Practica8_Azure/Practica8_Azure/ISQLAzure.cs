@@ -10,6 +10,6 @@ namespace Practica8_Azure
 {
    public interface ISQLAzure
     {
-        Task<bool> Authenticate();
+        Task<bool> Authenticate(); //QUE AUTENTIQUE PARA CADA PLATAFORMA 
     }
 }

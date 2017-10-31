@@ -27,6 +27,7 @@ namespace Practica8_Azure
             Cliente = new MobileServiceClient(AzureConnection.AzureURL);
             Tabla = Cliente.GetTable<_13090416>();
             LeerTabla();
+            Tabla.IncludeDeleted();
             
             
         }
@@ -45,11 +46,22 @@ namespace Practica8_Azure
         }
 
         private async void LeerTabla()
-        {
-            IEnumerable<_13090416> elementos = await Tabla.ToEnumerableAsync();
-            Items = new ObservableCollection<_13090416>(elementos);
-            BindingContext = this;
 
+        {
+          //IEnumerable<_13090416> elementos = await Tabla.Where(_13090416 => _13090416.Deleted == false).ToEnumerableAsync();
+
+          IEnumerable<_13090416> elementos = await Tabla.ToEnumerableAsync();
+           Items = new ObservableCollection<_13090416>(elementos);
+           BindingContext = this;
+
+        }
+
+        private void Button_Mostrar_Datos_Eliminados_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DeletePage());
+            //IEnumerable<_13090416> elementos = await Tabla.IncludeDeleted().ToEnumerableAsync();
+            //Items = new ObservableCollection<_13090416>(elementos);
+            //BindingContext = this;
         }
 
     }

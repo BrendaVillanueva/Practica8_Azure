@@ -63,5 +63,7 @@ namespace Practica8_Azure
             await DataPage.Tabla.DeleteAsync(datos);
             await Navigation.PushAsync(new DataPage());
         }
+
+      
     }
 }
