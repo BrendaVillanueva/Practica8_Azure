@@ -31,11 +31,9 @@ namespace Practica8_Azure
             var datos = new _13090416
             {
                 Matricula = Entry_Matricula.Text,
-
-
             };
-            await DeletePage.Tabla.UndeleteAsync(datos);
-            await Navigation.PushAsync(new DeletePage());
+            await DataPage.Tabla.UndeleteAsync(datos);
+            await Navigation.PushAsync(new DataPage());
 
         }
     }
